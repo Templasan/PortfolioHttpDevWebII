@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contato - Portfólio Acadêmico</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Contato</h1>
+    <div class="contato-info">
+      <p><strong>Email:</strong> <%= estudante.email %></p>
+      <p><strong>Telefone:</strong> <%= estudante.telefone %></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>

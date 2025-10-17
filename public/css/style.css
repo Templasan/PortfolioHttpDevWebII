@@ -1,0 +1,257 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #1e1f2e;
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #7390b9;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1e1f2e;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Botões */
+button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #7390b9;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #5a6d99;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+  color: #1e1f2e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Informações de contato */
+.contato-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Destaque para label */
+.contato-info strong {
+  color: #7390b9;
+}
+
+/* Dashboard */
+.dashboard-stats {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-stats p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.dashboard-stats h3 {
+  color: #1e1f2e;
+  margin-top: 20px;
+}
+
+.dashboard-stats ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.dashboard-stats li {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Lista de projetos */
+.projetos-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projeto-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.projeto-item a {
+  color: #7390b9;
+  text-decoration: none;
+}
+
+.projeto-item a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de adicionar projeto */
+.form-projeto {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-projeto input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-projeto button {
+  align-self: flex-start;
+}
+
+/* Lista de disciplinas */
+.disciplinas-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.disciplina-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Botões inline */
+.disciplina-item form {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.disciplina-item input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Formulário de adicionar disciplina */
+.form-disciplina {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 10px;
+}
+
+.form-disciplina input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-disciplina button {
+  padding: 8px 12px;
+}
+
+/* Sobre Mim */
+.sobre-info {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sobre-info p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.sobre-info strong {
+  color: #7390b9;
+}
+
+/* Página inicial */
+main h1 {
+  text-align: center;
+  color: #1e1f2e;
+  margin-top: 80px;
+  font-size: 2.2em;
+}
+
+.intro {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  color: #555;
+}
+
+/* Container principal para consistência */
+main.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}

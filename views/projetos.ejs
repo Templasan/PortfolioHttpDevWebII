@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Projetos - Portfólio Acadêmico</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .projetos-lista { list-style: none; padding-left: 0; }
+    .projeto-item { background: #fff; margin-bottom: 15px; padding: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .projeto-item form { display: inline-block; margin-left: 5px; }
+    .form-projeto, .form-editar { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .form-projeto input, .form-editar input { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+    .badge { display: inline-block; background: #7390b9; color: #fff; padding: 3px 8px; border-radius: 12px; font-size: 12px; margin-right: 5px; margin-top: 3px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <h1>Projetos Acadêmicos</h1>
+
+    <ul class="projetos-lista">
+      <% projetos.forEach(p => { %>
+        <li class="projeto-item">
+          <form action="/projetos/<%= p.id %>?_method=PUT" method="POST" class="form-editar">
+            <input type="text" name="titulo" value="<%= p.titulo %>" required>
+            <input type="text" name="descricao" value="<%= p.descricao %>" required>
+            <input type="text" name="link" value="<%= p.link %>">
+            <input type="text" name="tecnologias" value="<%= p.tecnologias.join(', ') %>" placeholder="Ex: Node.js, React">
+            <label>
+              <input type="checkbox" name="concluido" value="true" <%= p.concluido ? 'checked' : '' %>> Concluído
+            </label>
+            <button type="submit">Atualizar</button>
+          </form>
+
+          <form action="/projetos/<%= p.id %>?_method=DELETE" method="POST">
+            <button type="submit">Deletar</button>
+          </form>
+
+          <p><strong>Link:</strong> <a href="<%= p.link %>" target="_blank"><%= p.link %></a></p>
+          <p><strong>Tecnologias:</strong>
+            <% p.tecnologias.forEach(t => { %>
+              <span class="badge"><%= t %></span>
+            <% }) %>
+          </p>
+        </li>
+      <% }) %>
+    </ul>
+
+    <h2>Adicionar Novo Projeto</h2>
+    <form action="/projetos" method="POST" class="form-projeto">
+      <input type="text" name="titulo" placeholder="Título do projeto" required>
+      <input type="text" name="descricao" placeholder="Descrição" required>
+      <input type="text" name="link" placeholder="Link do projeto">
+      <input type="text" name="tecnologias" placeholder="Tecnologias (ex: Node.js, React)">
+      <label>
+        <input type="checkbox" name="concluido" value="true"> Concluído
+      </label>
+      <button type="submit">Adicionar Projeto</button>
+    </form>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

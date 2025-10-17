@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Disciplinas - Portfólio Acadêmico</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <h1>Minhas Disciplinas</h1>
+
+    <ul class="disciplinas-lista">
+      <% disciplinas.forEach((d, i) => { %>
+        <li class="disciplina-item">
+          <%= d %>
+
+          <!-- Formulário para deletar -->
+          <form action="/disciplinas/<%= i %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit">Deletar</button>
+          </form>
+
+          <!-- Formulário para editar -->
+          <form action="/disciplinas/<%= i %>?_method=PUT" method="POST" style="display:inline;">
+            <input type="text" name="nome" placeholder="Novo nome" required>
+            <button type="submit">Editar</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+
+    <!-- Formulário para adicionar nova disciplina -->
+    <h2>Adicionar Disciplina</h2>
+    <form action="/disciplinas" method="POST" class="form-disciplina">
+      <input type="text" name="nome" placeholder="Nome da disciplina" required>
+      <button type="submit">Adicionar</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>
